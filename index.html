@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XMLHttpRequest Example</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "data.txt", true); // Replace "data.txt" with your file or URL
+        xhttp.send();
+    </script>
+</body>
+</html>
